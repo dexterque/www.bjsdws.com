@@ -2202,3 +2202,24 @@ img { max-width: 100%; height: auto; }
   .iservice .item img { width: 96px; height: 96px; }
 }
 
+
+@media (hover: none) {
+  .gridlist .item .bg,
+  .gridlist .item .plus { left: 0; }
+  .gridlist .item img { -webkit-filter: none; filter: none; }
+}
+
+@media (hover: none) {
+  .gridlist .item .bg,
+  .gridlist .item .plus { display: none !important; }
+  .gridlist .item img { -webkit-filter: none !important; filter: none !important; }
+}
+
+@media (max-width: 768px) {
+  .ixbanner { height: auto; padding: 24px 16px; background-size: cover; background-position: center; }
+  .ixbanner .w1200 { width: 100%; padding: 0; box-sizing: border-box; }
+  .ixbanner .tel { float: none; width: 100%; padding-top: 0; text-align: center; }
+  .ixbanner .tel span { font-size: 16px; line-height: 24px; display: block; }
+  .ixbanner .tel strong { font-size: 26px; line-height: 32px; display: block; }
+  .ixbanner .btn { float: none; margin: 18px auto 0; width: 180px; height: 44px; line-height: 44px; font-size: 18px; }
+}
