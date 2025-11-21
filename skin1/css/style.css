@@ -2262,3 +2262,63 @@ img { max-width: 100%; height: auto; }
   .formData .item label { position: static; display: block; padding-left: 0; height: auto; line-height: 1.4; }
   .formData .item .txt { padding-left: 0; }
 }
+
+@media (max-width: 768px) {
+  .nav_main { height: auto; overflow: visible; }
+  .nav_main ul { display: flex; flex-wrap: wrap; justify-content: space-between; }
+  .nav_main li { width: 50%; height: auto; line-height: 44px; padding: 0; box-sizing: border-box; }
+  .nav_main li .nav1 { display: block; padding: 12px 10px; font-size: 16px; text-align: center; }
+  .nav_main .subNav { position: static; display: none; box-shadow: none; width: 100%; background: #3c3c3c; }
+  .nav_main .subNav a { padding: 10px 12px; height: auto; line-height: 1.4; border-bottom: 1px solid rgba(170,170,170,.15); }
+  .nav_main li:focus-within .subNav,
+  .nav_main li:hover .subNav { display: block; }
+}
+@media (max-width: 480px) {
+  .nav_main li { width: 100%; }
+}
+
+/* nav compact on small screens */
+@media (max-width: 600px) {
+  .nav_main ul { row-gap: 6px; }
+  .nav_main li { width: 50%; }
+  .nav_main li .nav1 { padding: 10px 8px; font-size: 14px; line-height: 1.4; }
+}
+
+@media (hover: none) {
+  /* Disable desktop hover effects on touch devices */
+  .gridlist .item:hover .bg,
+  .gridlist .item:hover .plus,
+  .icase .icaseCon .gridlist .item:hover .bg,
+  .icase .icaseCon .gridlist .item:hover .plus,
+  .resultPage .item2:hover .bg,
+  .resultPage .item2:hover .plus { display: none !important; left: 0; }
+  .gridlist .item:hover img,
+  .icase .icaseCon .gridlist .item:hover img,
+  .inews .item:hover img,
+  .newsPage .item:hover img,
+  .resultPage .item1:hover img,
+  .resultPage .item2:hover img { -webkit-filter: none !important; filter: none !important; }
+  .gridlist .item:hover h3,
+  .icase .icaseCon .gridlist .item:hover h3,
+  .resultPage .item2:hover h3 { left: 0; color: inherit; }
+  .nav_main li:hover .nav1 { background: #313131; }
+}
+
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; }
+  .toolbar1 { right: 8px; margin-right: 0; }
+}
+
+@media (max-width: 768px) {
+  /* Disable submenu open on touch */
+  .nav_main .subNav { display: none !important; height: 0 !important; overflow: hidden !important; opacity: 0 !important; visibility: hidden !important; }
+  .nav_main li:hover .subNav,
+  .nav_main li:focus-within .subNav { display: none !important; }
+}
+
+@media (max-width: 768px) {
+  /* active nav item highlight */
+  .nav_main li.active .nav1,
+  .nav_main li#cur .nav1,
+  .nav_main li .nav1.active { background: #67b306 !important; color: #fff !important; }
+}
